@@ -1,0 +1,502 @@
+
+==> Audit <==
+┌─────────┬──────────────────────────────────────────────┬──────────┬───────┬─────────┬─────────────────────┬─────────────────────┐
+│ COMMAND │                     ARGS                     │ PROFILE  │ USER  │ VERSION │     START TIME      │      END TIME       │
+├─────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┼─────────────────────┼─────────────────────┤
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:00 KST │ 02 Nov 26 22:01 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:23 KST │ 02 Nov 26 22:24 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:24 KST │ 02 Nov 26 22:24 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:25 KST │ 02 Nov 26 22:25 KST │
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:28 KST │ 02 Nov 26 22:28 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:29 KST │ 02 Nov 26 22:40 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:40 KST │ 02 Nov 26 22:41 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:41 KST │ 02 Nov 26 22:41 KST │
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:42 KST │ 02 Nov 26 22:43 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:43 KST │ 02 Nov 26 22:43 KST │
+│ image   │ load ghcr.io/내아이디/guestbook:v2           │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:44 KST │                     │
+│ image   │ load ghcr.io/digitalife666/guestbook:v2      │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:44 KST │ 02 Nov 26 22:44 KST │
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:44 KST │ 02 Nov 26 22:44 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:44 KST │ 02 Nov 26 22:45 KST │
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:48 KST │ 02 Nov 26 22:48 KST │
+│ service │ guestbook                                    │ minikube │ prime │ v1.39.0 │ 02 Nov 26 22:48 KST │ 02 Nov 26 22:48 KST │
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 24 Nov 26 18:27 KST │                     │
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 24 Nov 26 18:30 KST │                     │
+│ start   │ --driver=docker                              │ minikube │ prime │ v1.39.0 │ 24 Nov 26 18:31 KST │                     │
+│ start   │                                              │ minikube │ prime │ v1.39.0 │ 24 Nov 26 18:34 KST │                     │
+│ stop    │                                              │ minikube │ prime │ v1.39.0 │ 24 Nov 26 18:37 KST │ 24 Nov 26 18:38 KST │
+│ ssh     │ -- sudo crictl ps | grep -E 'apiserver|etcd' │ minikube │ prime │ v1.39.0 │ 24 Nov 26 18:38 KST │                     │
+│ ssh     │ -- curl -sk https://localhost:8443/healthz   │ minikube │ prime │ v1.39.0 │ 24 Nov 26 18:38 KST │                     │
+└─────────┴──────────────────────────────────────────────┴──────────┴───────┴─────────┴─────────────────────┴─────────────────────┘
+
+
+==> Last Start <==
+Log file created at: 2026/11/24 18:34:23
+Running on machine: DESKTOP-V52HPQR
+Binary: Built with gc go1.26.5 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1124 18:34:23.950781   13418 out.go:361] Setting OutFile to fd 1 ...
+I1124 18:34:23.950925   13418 out.go:414] isatty.IsTerminal(1) = true
+I1124 18:34:23.950928   13418 out.go:375] Setting ErrFile to fd 2...
+I1124 18:34:23.950945   13418 out.go:414] isatty.IsTerminal(2) = true
+I1124 18:34:23.951156   13418 root.go:332] Updating PATH: /home/prime/.minikube/bin
+W1124 18:34:23.951262   13418 root.go:308] Error reading config file at /home/prime/.minikube/config/config.json: open /home/prime/.minikube/config/config.json: no such file or directory
+I1124 18:34:23.951795   13418 out.go:369] Setting JSON to false
+I1124 18:34:23.953085   13418 start.go:134] hostinfo: {"hostname":"DESKTOP-V52HPQR","uptime":7747,"bootTime":1795505117,"procs":102,"os":"linux","platform":"ubuntu","platformFamily":"debian","platformVersion":"26.04","kernelVersion":"6.18.58.1-microsoft-standard-WSL2","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"guest","hostId":"592c2422-c074-44f2-a925-d63e00713540"}
+I1124 18:34:23.953123   13418 start.go:144] virtualization:  guest
+I1124 18:34:23.956937   13418 out.go:180] 😄  minikube v1.39.0 on Ubuntu 26.04 (amd64)
+I1124 18:34:23.967497   13418 notify.go:220] Checking for updates...
+I1124 18:34:23.968359   13418 config.go:187] Loaded profile config "minikube": Driver=docker, ContainerRuntime=containerd, KubernetesVersion=v1.37.0
+I1124 18:34:23.968562   13418 driver.go:413] Setting default libvirt URI to qemu:///system
+I1124 18:34:24.037751   13418 docker.go:126] docker version: linux-29.8.1:Docker Desktop 4.93.0 (240920)
+I1124 18:34:24.037928   13418 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I1124 18:34:24.295359   13418 info.go:266] docker info: {ID:e9cf0a6b-8bfa-488d-b428-1ad6897fe484 Containers:12 ContainersRunning:7 ContainersPaused:0 ContainersStopped:5 Images:15 Driver:overlayfs DriverStatus:[[driver-type io.containerd.snapshotter.v1]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:false BridgeNfIP6Tables:false Debug:false NFd:108 OomKillDisable:false NGoroutines:136 SystemTime:2026-11-24 09:34:24.276543032 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:12 KernelVersion:6.18.58.1-microsoft-standard-WSL2 OperatingSystem:Docker Desktop (containerized) OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[::1/128 127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:8 MemTotal:8251932672 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy:http.docker.internal:3128 HTTPSProxy:http.docker.internal:3128 NoProxy:hubproxy.docker.internal Name:docker-desktop Labels:[com.docker.desktop.address=unix:///var/run/docker-cli.sock] ExperimentalBuild:false ServerVersion:29.8.1 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:1294c24a7da8e5a793ed378161673abe94118892 Expected:} RuncCommit:{ID:v1.5.1-0-g8f2685a4 Expected:} InitCommit:{ID:de40ad0 Expected:} SecurityOptions:[name=seccomp,profile=builtin name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:agent Path:/usr/local/lib/docker/cli-plugins/docker-agent SchemaVersion:0.1.0 ShortDescription:Docker AI Agent Runner Vendor:Docker Inc. Version:v1.141.0] map[Name:ai Path:/usr/local/lib/docker/cli-plugins/docker-ai SchemaVersion:0.1.0 ShortDescription:Docker AI Agent - Ask Gordon Vendor:Docker Inc. Version:v1.31.0] map[Name:buildx Path:/usr/local/lib/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.37.1] map[Name:compose Path:/usr/local/lib/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v5.5.1] map[Name:debug Path:/usr/local/lib/docker/cli-plugins/docker-debug SchemaVersion:0.1.0 ShortDescription:Get a shell into any image or container Vendor:Docker Inc. Version:0.0.47] map[Name:desktop Path:/usr/local/lib/docker/cli-plugins/docker-desktop SchemaVersion:0.1.0 ShortDescription:Docker Desktop commands Vendor:Docker Inc. Version:v0.4.4] map[Name:dhi Path:/usr/local/lib/docker/cli-plugins/docker-dhi SchemaVersion:0.1.0 ShortDescription:CLI for managing Docker Hardened Images Vendor:Docker Inc. Version:v0.0.7] map[Name:extension Path:/usr/local/lib/docker/cli-plugins/docker-extension SchemaVersion:0.1.0 ShortDescription:Manages Docker extensions Vendor:Docker Inc. Version:v0.2.31] map[Name:init Path:/usr/local/lib/docker/cli-plugins/docker-init SchemaVersion:0.1.0 ShortDescription:Creates Docker-related starter files for your project Vendor:Docker Inc. Version:v1.4.0] map[Name:mcp Path:/usr/local/lib/docker/cli-plugins/docker-mcp SchemaVersion:0.1.0 ShortDescription:Docker MCP Plugin Vendor:Docker Inc. Version:v0.43.3] map[Name:model Path:/usr/local/lib/docker/cli-plugins/docker-model SchemaVersion:0.1.0 ShortDescription:Docker Model Runner Vendor:Docker Inc. Version:v1.2.6] map[Name:offload Path:/usr/local/lib/docker/cli-plugins/docker-offload SchemaVersion:0.1.0 ShortDescription:Docker Offload Vendor:Docker Inc. Version:v0.6.33] map[Name:pass Path:/usr/local/lib/docker/cli-plugins/docker-pass SchemaVersion:0.1.0 ShortDescription:Docker Pass Secrets Manager Plugin (beta) Vendor:Docker Inc. Version:v0.2.2] map[Hidden:true Name:sandbox Path:/usr/local/lib/docker/cli-plugins/docker-sandbox SchemaVersion:0.1.0 ShortDescription:"docker sandbox" is deprecated, use Docker Sandboxes instead URL:https://www.docker.com/products/docker-sandboxes Vendor:Docker Inc. Version:v0.13.0] map[Name:scout Path:/usr/local/lib/docker/cli-plugins/docker-scout SchemaVersion:0.1.0 ShortDescription:Docker Scout Vendor:Docker Inc. Version:v1.24.0]] Warnings:<nil>}}
+I1124 18:34:24.295576   13418 docker.go:321] overlay module found
+I1124 18:34:24.298473   13418 out.go:180] ✨  Using the docker driver based on existing profile
+I1124 18:34:24.300885   13418 start.go:315] selected driver: docker
+I1124 18:34:24.300893   13418 start.go:943] validating driver "docker" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 Memory:3072 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.37.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:containerd CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.37.0 ContainerRuntime:containerd ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false VmnetOffloading:false DNSServers:[] MDNS:false}
+I1124 18:34:24.300978   13418 start.go:954] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I1124 18:34:24.301065   13418 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I1124 18:34:24.601059   13418 info.go:266] docker info: {ID:e9cf0a6b-8bfa-488d-b428-1ad6897fe484 Containers:12 ContainersRunning:7 ContainersPaused:0 ContainersStopped:5 Images:15 Driver:overlayfs DriverStatus:[[driver-type io.containerd.snapshotter.v1]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:false BridgeNfIP6Tables:false Debug:false NFd:108 OomKillDisable:false NGoroutines:136 SystemTime:2026-11-24 09:34:24.585342737 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:12 KernelVersion:6.18.58.1-microsoft-standard-WSL2 OperatingSystem:Docker Desktop (containerized) OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[::1/128 127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:8 MemTotal:8251932672 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy:http.docker.internal:3128 HTTPSProxy:http.docker.internal:3128 NoProxy:hubproxy.docker.internal Name:docker-desktop Labels:[com.docker.desktop.address=unix:///var/run/docker-cli.sock] ExperimentalBuild:false ServerVersion:29.8.1 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:1294c24a7da8e5a793ed378161673abe94118892 Expected:} RuncCommit:{ID:v1.5.1-0-g8f2685a4 Expected:} InitCommit:{ID:de40ad0 Expected:} SecurityOptions:[name=seccomp,profile=builtin name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:agent Path:/usr/local/lib/docker/cli-plugins/docker-agent SchemaVersion:0.1.0 ShortDescription:Docker AI Agent Runner Vendor:Docker Inc. Version:v1.141.0] map[Name:ai Path:/usr/local/lib/docker/cli-plugins/docker-ai SchemaVersion:0.1.0 ShortDescription:Docker AI Agent - Ask Gordon Vendor:Docker Inc. Version:v1.31.0] map[Name:buildx Path:/usr/local/lib/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.37.1] map[Name:compose Path:/usr/local/lib/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v5.5.1] map[Name:debug Path:/usr/local/lib/docker/cli-plugins/docker-debug SchemaVersion:0.1.0 ShortDescription:Get a shell into any image or container Vendor:Docker Inc. Version:0.0.47] map[Name:desktop Path:/usr/local/lib/docker/cli-plugins/docker-desktop SchemaVersion:0.1.0 ShortDescription:Docker Desktop commands Vendor:Docker Inc. Version:v0.4.4] map[Name:dhi Path:/usr/local/lib/docker/cli-plugins/docker-dhi SchemaVersion:0.1.0 ShortDescription:CLI for managing Docker Hardened Images Vendor:Docker Inc. Version:v0.0.7] map[Name:extension Path:/usr/local/lib/docker/cli-plugins/docker-extension SchemaVersion:0.1.0 ShortDescription:Manages Docker extensions Vendor:Docker Inc. Version:v0.2.31] map[Name:init Path:/usr/local/lib/docker/cli-plugins/docker-init SchemaVersion:0.1.0 ShortDescription:Creates Docker-related starter files for your project Vendor:Docker Inc. Version:v1.4.0] map[Name:mcp Path:/usr/local/lib/docker/cli-plugins/docker-mcp SchemaVersion:0.1.0 ShortDescription:Docker MCP Plugin Vendor:Docker Inc. Version:v0.43.3] map[Name:model Path:/usr/local/lib/docker/cli-plugins/docker-model SchemaVersion:0.1.0 ShortDescription:Docker Model Runner Vendor:Docker Inc. Version:v1.2.6] map[Name:offload Path:/usr/local/lib/docker/cli-plugins/docker-offload SchemaVersion:0.1.0 ShortDescription:Docker Offload Vendor:Docker Inc. Version:v0.6.33] map[Name:pass Path:/usr/local/lib/docker/cli-plugins/docker-pass SchemaVersion:0.1.0 ShortDescription:Docker Pass Secrets Manager Plugin (beta) Vendor:Docker Inc. Version:v0.2.2] map[Hidden:true Name:sandbox Path:/usr/local/lib/docker/cli-plugins/docker-sandbox SchemaVersion:0.1.0 ShortDescription:"docker sandbox" is deprecated, use Docker Sandboxes instead URL:https://www.docker.com/products/docker-sandboxes Vendor:Docker Inc. Version:v0.13.0] map[Name:scout Path:/usr/local/lib/docker/cli-plugins/docker-scout SchemaVersion:0.1.0 ShortDescription:Docker Scout Vendor:Docker Inc. Version:v1.24.0]] Warnings:<nil>}}
+I1124 18:34:24.601897   13418 cni.go:83] Creating CNI manager for ""
+I1124 18:34:24.601957   13418 cni.go:142] "docker" driver + "containerd" runtime found, recommending kindnet
+I1124 18:34:24.602031   13418 start.go:359] cluster config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 Memory:3072 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.37.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:containerd CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.37.0 ContainerRuntime:containerd ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false VmnetOffloading:false DNSServers:[] MDNS:false}
+I1124 18:34:24.604734   13418 out.go:180] 👍  Starting "minikube" primary control-plane node in "minikube" cluster
+I1124 18:34:24.607154   13418 cache.go:135] Beginning downloading kic base image for docker with containerd
+I1124 18:34:24.612709   13418 out.go:180] 🚜  Pulling base image v0.0.51 ...
+I1124 18:34:24.615270   13418 preload.go:187] Checking if preload exists for k8s version v1.37.0 and runtime containerd
+I1124 18:34:24.615301   13418 preload.go:202] Found local preload: /home/prime/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.37.0-containerd-overlay2-amd64.tar.lz4
+I1124 18:34:24.615307   13418 cache.go:66] Caching tarball of preloaded images
+I1124 18:34:24.615360   13418 image.go:82] Checking for gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 in local docker daemon
+I1124 18:34:24.615442   13418 preload.go:250] Found /home/prime/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.37.0-containerd-overlay2-amd64.tar.lz4 in cache, skipping download
+I1124 18:34:24.615467   13418 cache.go:69] Finished verifying existence of preloaded tar for v1.37.0 on containerd
+I1124 18:34:24.615537   13418 profile.go:144] Saving config to /home/prime/.minikube/profiles/minikube/config.json ...
+I1124 18:34:24.820589   13418 cache.go:164] Downloading gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 to local cache
+I1124 18:34:24.821006   13418 image.go:66] Checking for gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 in local cache directory
+I1124 18:34:24.821020   13418 image.go:69] Found gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 in local cache directory, skipping pull
+I1124 18:34:24.821024   13418 image.go:138] gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 exists in cache, skipping pull
+I1124 18:34:24.821034   13418 cache.go:167] successfully saved gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 as a tarball
+I1124 18:34:24.821037   13418 cache.go:177] Loading gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 from local cache
+I1124 18:34:37.153935   13418 cache.go:179] successfully loaded and using gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 from cached tarball
+I1124 18:34:37.153966   13418 cache.go:241] Successfully downloaded all kic artifacts
+I1124 18:34:37.154006   13418 start.go:361] acquireMachinesLock for minikube: {Name:mkc66785c6a544de2b186e9c3d52cf6bd4ddd5fb Timeout:10m0s Delay:500ms}
+I1124 18:34:37.154079   13418 start.go:365] duration metric: took 53.304µs to acquireMachinesLock for "minikube"
+I1124 18:34:37.154099   13418 start.go:95] Skipping create...Using existing machine configuration
+I1124 18:34:37.154104   13418 fix.go:53] fixHost starting: 
+I1124 18:34:37.154947   13418 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1124 18:34:37.231816   13418 fix.go:111] recreateIfNeeded on minikube: state=Running err=<nil>
+I1124 18:34:37.245259   13418 out.go:253] 🏃  Updating the running docker "minikube" container ...
+I1124 18:34:37.245406   13418 machine.go:96] provisionDockerMachine start ...
+I1124 18:34:37.245608   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:37.320886   13418 main.go:144] libmachine: Using SSH client type: native
+I1124 18:34:37.321659   13418 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x923d20] 0x926ac0 <nil>  [] 0s <nil>} 127.0.0.1 51635 <nil> <nil>}
+I1124 18:34:37.321720   13418 main.go:144] libmachine: About to run SSH command:
+hostname
+I1124 18:34:37.494353   13418 main.go:144] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1124 18:34:37.494368   13418 ubuntu.go:182] provisioning hostname "minikube"
+I1124 18:34:37.494438   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:37.550038   13418 main.go:144] libmachine: Using SSH client type: native
+I1124 18:34:37.550304   13418 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x923d20] 0x926ac0 <nil>  [] 0s <nil>} 127.0.0.1 51635 <nil> <nil>}
+I1124 18:34:37.550316   13418 main.go:144] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I1124 18:34:37.720567   13418 main.go:144] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1124 18:34:37.720669   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:37.771398   13418 main.go:144] libmachine: Using SSH client type: native
+I1124 18:34:37.771724   13418 main.go:144] libmachine: &{{{<nil> 0 [] [] []} docker [0x923d20] 0x926ac0 <nil>  [] 0s <nil>} 127.0.0.1 51635 <nil> <nil>}
+I1124 18:34:37.771733   13418 main.go:144] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I1124 18:34:37.938184   13418 main.go:144] libmachine: SSH cmd err, output: <nil>: 
+I1124 18:34:37.938198   13418 ubuntu.go:188] set auth options {CertDir:/home/prime/.minikube CaCertPath:/home/prime/.minikube/certs/ca.pem CaPrivateKeyPath:/home/prime/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/prime/.minikube/machines/server.pem ServerKeyPath:/home/prime/.minikube/machines/server-key.pem ClientKeyPath:/home/prime/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/prime/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/prime/.minikube}
+I1124 18:34:37.938215   13418 ubuntu.go:190] setting up certificates
+I1124 18:34:37.938224   13418 provision.go:83] configureAuth start
+I1124 18:34:37.938289   13418 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1124 18:34:37.997881   13418 provision.go:142] copyHostCerts
+I1124 18:34:37.997950   13418 exec_runner.go:140] found /home/prime/.minikube/ca.pem, removing ...
+I1124 18:34:37.997969   13418 exec_runner.go:199] rm: /home/prime/.minikube/ca.pem
+I1124 18:34:37.998053   13418 exec_runner.go:147] cp: /home/prime/.minikube/certs/ca.pem --> /home/prime/.minikube/ca.pem (1074 bytes)
+I1124 18:34:37.998205   13418 exec_runner.go:140] found /home/prime/.minikube/cert.pem, removing ...
+I1124 18:34:37.998209   13418 exec_runner.go:199] rm: /home/prime/.minikube/cert.pem
+I1124 18:34:37.998235   13418 exec_runner.go:147] cp: /home/prime/.minikube/certs/cert.pem --> /home/prime/.minikube/cert.pem (1119 bytes)
+I1124 18:34:37.998309   13418 exec_runner.go:140] found /home/prime/.minikube/key.pem, removing ...
+I1124 18:34:37.998312   13418 exec_runner.go:199] rm: /home/prime/.minikube/key.pem
+I1124 18:34:37.998333   13418 exec_runner.go:147] cp: /home/prime/.minikube/certs/key.pem --> /home/prime/.minikube/key.pem (1675 bytes)
+I1124 18:34:37.998398   13418 provision.go:116] generating server cert: /home/prime/.minikube/machines/server.pem ca-key=/home/prime/.minikube/certs/ca.pem private-key=/home/prime/.minikube/certs/ca-key.pem org=prime.minikube san=[127.0.0.1 192.168.49.2 localhost minikube]
+I1124 18:34:38.171861   13418 provision.go:176] copyRemoteCerts
+I1124 18:34:38.171942   13418 ssh_runner.go:191] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I1124 18:34:38.171992   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:38.229867   13418 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51635 SSHKeyPath:/home/prime/.minikube/machines/minikube/id_rsa Username:docker}
+I1124 18:34:38.350207   13418 ssh_runner.go:352] scp /home/prime/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1074 bytes)
+I1124 18:34:38.397336   13418 ssh_runner.go:352] scp /home/prime/.minikube/machines/server.pem --> /etc/docker/server.pem (1176 bytes)
+I1124 18:34:38.467179   13418 ssh_runner.go:352] scp /home/prime/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I1124 18:34:38.531381   13418 provision.go:86] duration metric: took 593.145334ms to configureAuth
+I1124 18:34:38.531398   13418 ubuntu.go:206] setting minikube options for container-runtime
+I1124 18:34:38.531664   13418 config.go:187] Loaded profile config "minikube": Driver=docker, ContainerRuntime=containerd, KubernetesVersion=v1.37.0
+I1124 18:34:38.531673   13418 machine.go:99] duration metric: took 1.286256469s to provisionDockerMachine
+I1124 18:34:38.531683   13418 start.go:292] postStartSetup for "minikube" (driver="docker")
+I1124 18:34:38.531696   13418 start.go:321] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I1124 18:34:38.531790   13418 ssh_runner.go:191] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I1124 18:34:38.531874   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:38.601186   13418 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51635 SSHKeyPath:/home/prime/.minikube/machines/minikube/id_rsa Username:docker}
+I1124 18:34:38.724246   13418 ssh_runner.go:191] Run: cat /etc/os-release
+I1124 18:34:38.729584   13418 main.go:144] libmachine: Couldn't set key VERSION_CODENAME, no corresponding struct field found
+I1124 18:34:38.729599   13418 info.go:137] Remote host: Debian GNU/Linux 12 (bookworm)
+I1124 18:34:38.729608   13418 filesync.go:125] Scanning /home/prime/.minikube/addons for local assets ...
+I1124 18:34:38.729663   13418 filesync.go:125] Scanning /home/prime/.minikube/files for local assets ...
+I1124 18:34:38.729686   13418 start.go:295] duration metric: took 197.997365ms for postStartSetup
+I1124 18:34:38.729751   13418 ssh_runner.go:191] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I1124 18:34:38.729808   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:38.792157   13418 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51635 SSHKeyPath:/home/prime/.minikube/machines/minikube/id_rsa Username:docker}
+I1124 18:34:38.914160   13418 ssh_runner.go:191] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I1124 18:34:38.920986   13418 fix.go:55] duration metric: took 1.766872137s for fixHost
+I1124 18:34:38.921010   13418 start.go:82] releasing machines lock for "minikube", held for 1.766925042s
+I1124 18:34:38.921124   13418 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1124 18:34:38.973369   13418 ssh_runner.go:191] Run: cat /version.json
+I1124 18:34:38.973414   13418 ssh_runner.go:191] Run: curl -sS -m 2 https://registry.k8s.io/
+I1124 18:34:38.973424   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:38.973524   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:39.033442   13418 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51635 SSHKeyPath:/home/prime/.minikube/machines/minikube/id_rsa Username:docker}
+I1124 18:34:39.036906   13418 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51635 SSHKeyPath:/home/prime/.minikube/machines/minikube/id_rsa Username:docker}
+I1124 18:34:39.261740   13418 ssh_runner.go:191] Run: systemctl --version
+I1124 18:34:39.270941   13418 ssh_runner.go:191] Run: sh -c "stat /etc/cni/net.d/*loopback.conf*"
+W1124 18:34:39.281052   13418 cni.go:208] loopback cni configuration skipped: "/etc/cni/net.d/*loopback.conf*" not found
+I1124 18:34:39.281118   13418 ssh_runner.go:191] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf "%p, " -exec sh -c "sudo mv {} {}.mk_disabled" ;
+I1124 18:34:39.294711   13418 cni.go:258] no active bridge cni configs found in "/etc/cni/net.d" - nothing to disable
+I1124 18:34:39.294722   13418 start.go:461] detecting cgroup driver to use...
+I1124 18:34:39.294761   13418 detect.go:178] detected "systemd" cgroup driver on host os
+I1124 18:34:39.294816   13418 ssh_runner.go:191] Run: sudo systemctl stop -f crio
+I1124 18:34:39.316899   13418 ssh_runner.go:191] Run: sudo systemctl is-active --quiet service crio
+I1124 18:34:39.335237   13418 docker.go:218] disabling cri-docker service (if available) ...
+I1124 18:34:39.335305   13418 ssh_runner.go:191] Run: sudo systemctl stop -f cri-docker.socket
+I1124 18:34:39.361191   13418 ssh_runner.go:191] Run: sudo systemctl stop -f cri-docker.service
+I1124 18:34:39.389489   13418 ssh_runner.go:191] Run: sudo systemctl disable cri-docker.socket
+I1124 18:34:39.646349   13418 ssh_runner.go:191] Run: sudo systemctl mask cri-docker.service
+I1124 18:34:39.899546   13418 docker.go:234] disabling docker service ...
+I1124 18:34:39.899627   13418 ssh_runner.go:191] Run: sudo systemctl stop -f docker.socket
+I1124 18:34:39.930612   13418 ssh_runner.go:191] Run: sudo systemctl stop -f docker.service
+I1124 18:34:39.950361   13418 ssh_runner.go:191] Run: sudo systemctl disable docker.socket
+I1124 18:34:40.274297   13418 ssh_runner.go:191] Run: sudo systemctl mask docker.service
+I1124 18:34:40.557269   13418 ssh_runner.go:191] Run: sudo systemctl is-active --quiet service docker
+I1124 18:34:40.574320   13418 ssh_runner.go:191] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///run/containerd/containerd.sock
+" | sudo tee /etc/crictl.yaml"
+I1124 18:34:40.598579   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i -r 's|^( *)sandbox_image = .*$|\1sandbox_image = "registry.k8s.io/pause:3.10.2"|' /etc/containerd/config.toml"
+I1124 18:34:40.613736   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i -r 's|^( *)restrict_oom_score_adj = .*$|\1restrict_oom_score_adj = false|' /etc/containerd/config.toml"
+I1124 18:34:40.628087   13418 containerd.go:146] configuring containerd to use "systemd" as cgroup driver...
+I1124 18:34:40.628133   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i -r 's|^( *)SystemdCgroup = .*$|\1SystemdCgroup = true|g' /etc/containerd/config.toml"
+I1124 18:34:40.643451   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i 's|"io.containerd.runtime.v1.linux"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I1124 18:34:40.658968   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i '/systemd_cgroup/d' /etc/containerd/config.toml"
+I1124 18:34:40.671789   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i 's|"io.containerd.runc.v1"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I1124 18:34:40.689008   13418 ssh_runner.go:191] Run: sh -c "sudo rm -rf /etc/cni/net.mk"
+I1124 18:34:40.701072   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i -r 's|^( *)conf_dir = .*$|\1conf_dir = "/etc/cni/net.d"|g' /etc/containerd/config.toml"
+I1124 18:34:40.717833   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i '/^ *enable_unprivileged_ports = .*/d' /etc/containerd/config.toml"
+I1124 18:34:40.732362   13418 ssh_runner.go:191] Run: sh -c "sudo sed -i -r 's|^( *)\[plugins."io.containerd.grpc.v1.cri"\]|&\n\1  enable_unprivileged_ports = true|' /etc/containerd/config.toml"
+I1124 18:34:40.747499   13418 ssh_runner.go:191] Run: sudo sysctl net.bridge.bridge-nf-call-iptables
+I1124 18:34:40.760188   13418 ssh_runner.go:191] Run: sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+I1124 18:34:40.771685   13418 ssh_runner.go:191] Run: sudo systemctl daemon-reload
+I1124 18:34:41.028484   13418 ssh_runner.go:191] Run: sudo systemctl restart containerd
+I1124 18:34:41.323448   13418 start.go:518] Will wait 60s for socket path /run/containerd/containerd.sock
+I1124 18:34:41.323632   13418 ssh_runner.go:191] Run: stat /run/containerd/containerd.sock
+I1124 18:34:41.329385   13418 start.go:539] Will wait 60s for crictl version
+I1124 18:34:41.329453   13418 ssh_runner.go:191] Run: which crictl
+I1124 18:34:41.334529   13418 ssh_runner.go:191] Run: sudo /usr/local/bin/crictl version
+I1124 18:34:41.371797   13418 start.go:555] Version:  0.1.0
+RuntimeName:  containerd
+RuntimeVersion:  v2.3.4
+RuntimeApiVersion:  v1
+I1124 18:34:41.371930   13418 ssh_runner.go:191] Run: containerd --version
+I1124 18:34:41.401747   13418 ssh_runner.go:191] Run: containerd --version
+I1124 18:34:41.435577   13418 out.go:180] 📦  Preparing Kubernetes v1.37.0 on containerd 2.3.4 ...
+I1124 18:34:41.438331   13418 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I1124 18:34:41.488669   13418 ssh_runner.go:191] Run: grep 192.168.49.1	host.minikube.internal$ /etc/hosts
+I1124 18:34:41.495404   13418 kubeadm.go:879] updating cluster {Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 Memory:3072 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.37.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:containerd CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.37.0 ContainerRuntime:containerd ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false VmnetOffloading:false DNSServers:[] MDNS:false} ...
+I1124 18:34:41.495497   13418 preload.go:187] Checking if preload exists for k8s version v1.37.0 and runtime containerd
+I1124 18:34:41.495544   13418 ssh_runner.go:191] Run: sudo crictl images --output json
+I1124 18:34:41.536187   13418 containerd.go:634] all images are preloaded for containerd runtime.
+I1124 18:34:41.536196   13418 containerd.go:541] Images already preloaded, skipping extraction
+I1124 18:34:41.536316   13418 ssh_runner.go:191] Run: sudo crictl images --output json
+I1124 18:34:41.585333   13418 containerd.go:634] all images are preloaded for containerd runtime.
+I1124 18:34:41.585342   13418 cache_images.go:86] Images are preloaded, skipping loading
+I1124 18:34:41.585347   13418 kubeadm.go:930] updating node { 192.168.49.2 8443 v1.37.0 containerd true true} ...
+I1124 18:34:41.585416   13418 kubeadm.go:942] kubelet [Unit]
+Wants=containerd.service
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.37.0/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --hostname-override=minikube --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.49.2
+
+[Install]
+ config:
+{KubernetesVersion:v1.37.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:containerd CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:}
+I1124 18:34:41.585494   13418 ssh_runner.go:191] Run: sudo crictl --timeout=10s info
+I1124 18:34:41.627624   13418 cni.go:83] Creating CNI manager for ""
+I1124 18:34:41.627633   13418 cni.go:142] "docker" driver + "containerd" runtime found, recommending kindnet
+I1124 18:34:41.627671   13418 kubeadm.go:94] Using pod CIDR: 10.244.0.0/16
+I1124 18:34:41.627691   13418 kubeadm.go:206] kubeadm options: {CertDir:/var/lib/minikube/certs ServiceCIDR:10.96.0.0/12 PodSubnet:10.244.0.0/16 AdvertiseAddress:192.168.49.2 APIServerPort:8443 KubernetesVersion:v1.37.0 EtcdDataDir:/var/lib/minikube/etcd EtcdExtraArgs:map[] ClusterName:minikube NodeName:minikube DNSDomain:cluster.local CRISocket:/run/containerd/containerd.sock ImageRepository: ComponentOptions:[{Component:apiServer ExtraArgs:map[enable-admission-plugins:NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota] Pairs:map[certSANs:["127.0.0.1", "localhost", "192.168.49.2"]]} {Component:controllerManager ExtraArgs:map[allocate-node-cidrs:true leader-elect:false] Pairs:map[]} {Component:scheduler ExtraArgs:map[leader-elect:false] Pairs:map[]}] FeatureArgs:map[] NodeIP:192.168.49.2 CgroupDriver:systemd ClientCAFile:/var/lib/minikube/certs/ca.crt StaticPodPath:/etc/kubernetes/manifests ControlPlaneAddress:control-plane.minikube.internal KubeProxyOptions:map[] ResolvConfSearchRegression:false KubeletConfigOpts:map[containerRuntimeEndpoint:unix:///run/containerd/containerd.sock hairpinMode:hairpin-veth runtimeRequestTimeout:15m] PrependCriSocketUnix:true}
+I1124 18:34:41.627794   13418 kubeadm.go:212] kubeadm config:
+apiVersion: kubeadm.k8s.io/v1beta4
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 192.168.49.2
+  bindPort: 8443
+bootstrapTokens:
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
+nodeRegistration:
+  criSocket: unix:///run/containerd/containerd.sock
+  name: "minikube"
+  kubeletExtraArgs:
+    - name: "node-ip"
+      value: "192.168.49.2"
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta4
+kind: ClusterConfiguration
+apiServer:
+  certSANs: ["127.0.0.1", "localhost", "192.168.49.2"]
+  extraArgs:
+    - name: "enable-admission-plugins"
+      value: "NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
+controllerManager:
+  extraArgs:
+    - name: "allocate-node-cidrs"
+      value: "true"
+    - name: "leader-elect"
+      value: "false"
+scheduler:
+  extraArgs:
+    - name: "leader-elect"
+      value: "false"
+certificatesDir: /var/lib/minikube/certs
+clusterName: mk
+controlPlaneEndpoint: control-plane.minikube.internal:8443
+etcd:
+  local:
+    dataDir: /var/lib/minikube/etcd
+kubernetesVersion: v1.37.0
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+authentication:
+  x509:
+    clientCAFile: /var/lib/minikube/certs/ca.crt
+cgroupDriver: systemd
+containerRuntimeEndpoint: unix:///run/containerd/containerd.sock
+hairpinMode: hairpin-veth
+runtimeRequestTimeout: 15m
+clusterDomain: "cluster.local"
+# disable disk resource management by default
+imageGCHighThresholdPercent: 100
+evictionHard:
+  nodefs.available: "0%"
+  nodefs.inodesFree: "0%"
+  imagefs.available: "0%"
+failSwapOn: false
+staticPodPath: /etc/kubernetes/manifests
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+clusterCIDR: "10.244.0.0/16"
+metricsBindAddress: 0.0.0.0:10249
+conntrack:
+  maxPerCore: 0
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_established"
+  tcpEstablishedTimeout: 0s
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_close"
+  tcpCloseWaitTimeout: 0s
+
+I1124 18:34:41.627872   13418 ssh_runner.go:191] Run: sudo ls /var/lib/minikube/binaries/v1.37.0
+I1124 18:34:41.645651   13418 binaries.go:50] Found k8s binaries, skipping transfer
+I1124 18:34:41.645754   13418 ssh_runner.go:191] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+I1124 18:34:41.659175   13418 ssh_runner.go:352] scp memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (312 bytes)
+I1124 18:34:41.681644   13418 ssh_runner.go:352] scp memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I1124 18:34:41.702478   13418 ssh_runner.go:352] scp memory --> /var/tmp/minikube/kubeadm.yaml.new (2220 bytes)
+I1124 18:34:41.728253   13418 ssh_runner.go:191] Run: grep 192.168.49.2	control-plane.minikube.internal$ /etc/hosts
+I1124 18:34:41.734093   13418 ssh_runner.go:191] Run: sudo systemctl daemon-reload
+I1124 18:34:41.977491   13418 ssh_runner.go:191] Run: sudo systemctl start kubelet
+I1124 18:34:41.996872   13418 certs.go:67] Setting up /home/prime/.minikube/profiles/minikube for IP: 192.168.49.2
+I1124 18:34:41.996882   13418 certs.go:193] generating shared ca certs ...
+I1124 18:34:41.996893   13418 certs.go:225] acquiring lock for ca certs: {Name:mk03f58d9d511aa85d2a541597894312eebefce3 Timeout:1m0s Delay:500ms}
+I1124 18:34:41.997053   13418 certs.go:234] skipping valid "minikubeCA" ca cert: /home/prime/.minikube/ca.key
+I1124 18:34:41.997113   13418 certs.go:234] skipping valid "proxyClientCA" ca cert: /home/prime/.minikube/proxy-client-ca.key
+I1124 18:34:41.997122   13418 certs.go:255] generating profile certs ...
+I1124 18:34:41.997256   13418 certs.go:358] skipping valid signed profile cert regeneration for "minikube-user": /home/prime/.minikube/profiles/minikube/client.key
+I1124 18:34:41.997374   13418 certs.go:358] skipping valid signed profile cert regeneration for "minikube": /home/prime/.minikube/profiles/minikube/apiserver.key.7fb57e3c
+I1124 18:34:41.997435   13418 certs.go:358] skipping valid signed profile cert regeneration for "aggregator": /home/prime/.minikube/profiles/minikube/proxy-client.key
+I1124 18:34:41.997698   13418 certs.go:482] found cert: /home/prime/.minikube/certs/ca-key.pem (1679 bytes)
+I1124 18:34:41.997778   13418 certs.go:482] found cert: /home/prime/.minikube/certs/ca.pem (1074 bytes)
+I1124 18:34:41.997849   13418 certs.go:482] found cert: /home/prime/.minikube/certs/cert.pem (1119 bytes)
+I1124 18:34:41.997907   13418 certs.go:482] found cert: /home/prime/.minikube/certs/key.pem (1675 bytes)
+I1124 18:34:41.998717   13418 ssh_runner.go:352] scp /home/prime/.minikube/ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I1124 18:34:42.031915   13418 ssh_runner.go:352] scp /home/prime/.minikube/ca.key --> /var/lib/minikube/certs/ca.key (1679 bytes)
+I1124 18:34:42.067854   13418 ssh_runner.go:352] scp /home/prime/.minikube/proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I1124 18:34:42.102658   13418 ssh_runner.go:352] scp /home/prime/.minikube/proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1679 bytes)
+I1124 18:34:42.134705   13418 ssh_runner.go:352] scp /home/prime/.minikube/profiles/minikube/apiserver.crt --> /var/lib/minikube/certs/apiserver.crt (1411 bytes)
+I1124 18:34:42.167227   13418 ssh_runner.go:352] scp /home/prime/.minikube/profiles/minikube/apiserver.key --> /var/lib/minikube/certs/apiserver.key (1675 bytes)
+I1124 18:34:42.201416   13418 ssh_runner.go:352] scp /home/prime/.minikube/profiles/minikube/proxy-client.crt --> /var/lib/minikube/certs/proxy-client.crt (1147 bytes)
+I1124 18:34:42.236206   13418 ssh_runner.go:352] scp /home/prime/.minikube/profiles/minikube/proxy-client.key --> /var/lib/minikube/certs/proxy-client.key (1675 bytes)
+I1124 18:34:42.268063   13418 ssh_runner.go:352] scp /home/prime/.minikube/ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I1124 18:34:42.300332   13418 ssh_runner.go:352] scp memory --> /var/lib/minikube/kubeconfig (722 bytes)
+I1124 18:34:42.324648   13418 ssh_runner.go:191] Run: openssl version
+I1124 18:34:42.337941   13418 ssh_runner.go:191] Run: sudo test -s /usr/share/ca-certificates/minikubeCA.pem
+I1124 18:34:42.351614   13418 ssh_runner.go:191] Run: sudo ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem
+I1124 18:34:42.366035   13418 ssh_runner.go:191] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I1124 18:34:42.372157   13418 certs.go:526] hashing: -rw-r--r-- 1 root root 1111 Nov  2 13:01 /usr/share/ca-certificates/minikubeCA.pem
+I1124 18:34:42.372199   13418 ssh_runner.go:191] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I1124 18:34:42.421295   13418 ssh_runner.go:191] Run: sudo test -L /etc/ssl/certs/b5213941.0
+I1124 18:34:42.433714   13418 ssh_runner.go:191] Run: stat /var/lib/minikube/certs/apiserver-kubelet-client.crt
+I1124 18:34:42.439967   13418 ssh_runner.go:191] Run: openssl x509 -noout -in /var/lib/minikube/certs/apiserver-etcd-client.crt -checkend 86400
+I1124 18:34:42.492603   13418 ssh_runner.go:191] Run: openssl x509 -noout -in /var/lib/minikube/certs/apiserver-kubelet-client.crt -checkend 86400
+I1124 18:34:42.539628   13418 ssh_runner.go:191] Run: openssl x509 -noout -in /var/lib/minikube/certs/etcd/server.crt -checkend 86400
+I1124 18:34:42.594203   13418 ssh_runner.go:191] Run: openssl x509 -noout -in /var/lib/minikube/certs/etcd/healthcheck-client.crt -checkend 86400
+I1124 18:34:42.636328   13418 ssh_runner.go:191] Run: openssl x509 -noout -in /var/lib/minikube/certs/etcd/peer.crt -checkend 86400
+I1124 18:34:42.682369   13418 ssh_runner.go:191] Run: openssl x509 -noout -in /var/lib/minikube/certs/front-proxy-client.crt -checkend 86400
+I1124 18:34:42.727425   13418 kubeadm.go:396] StartCluster: {Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.51@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24 Memory:3072 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.37.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:containerd CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.37.0 ContainerRuntime:containerd ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s MountString: Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false DisableCoreDNSLog:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s Rosetta:false VmnetOffloading:false DNSServers:[] MDNS:false}
+I1124 18:34:42.727470   13418 cri.go:59] listing CRI containers in root /run/containerd/runc/k8s.io: {State:paused Name: Namespaces:[kube-system]}
+I1124 18:34:42.727565   13418 ssh_runner.go:191] Run: sudo -s eval "crictl --timeout=10s ps -a --quiet --label io.kubernetes.pod.namespace=kube-system"
+I1124 18:34:42.770674   13418 cri.go:94] found id: "e4a1bec31d4b5e257fb10cccb9416bd0a024a46474d3851c8ce49eb310f5781b"
+I1124 18:34:42.770682   13418 cri.go:94] found id: "ecb63a960d380242c974a93f614bf422fb7f06e84509bf1d829a2ba918ca4044"
+I1124 18:34:42.770685   13418 cri.go:94] found id: "8d7d8ad73eb359c5450e2b8b1de837127b5443626500d6ce26725d44ec3b2ea7"
+I1124 18:34:42.770687   13418 cri.go:94] found id: "94c3baa1c5dd1649ad04543c743a8957d516b47c1969d19e543906762bc5b68c"
+I1124 18:34:42.770689   13418 cri.go:94] found id: "ee53df02b16d3a1e8c7d99e1b4b344d17717421012bf311884d8e33584d8803b"
+I1124 18:34:42.770691   13418 cri.go:94] found id: "4a2354d6da2985d9ab4e005641b8a04803d84130c0e3620fae7e084a36b81792"
+I1124 18:34:42.770692   13418 cri.go:94] found id: "386256ef37aea516bce7b405544448f32bfb0399bde9de8e4171811fb4055537"
+I1124 18:34:42.770694   13418 cri.go:94] found id: "c85035d65e38fe45037a6234f4b99100d0d0dcce583909a83f17bbbe60b5e90f"
+I1124 18:34:42.770696   13418 cri.go:94] found id: "80fc471495782081ba38e20c3fdfd8eedbc828cb0cb8dad37314f2b5ff5405b0"
+I1124 18:34:42.770704   13418 cri.go:94] found id: "3c6904771968c7e3f2aac0ed8271195a2a132e76277aff459449f140849efb77"
+I1124 18:34:42.770706   13418 cri.go:94] found id: "b2c93bbd2f0c3df01516bc9e5a5ff6b91c6ac19d889bbd4e39e67f8281c2c3ec"
+I1124 18:34:42.770707   13418 cri.go:94] found id: "693104a1dce9f8b17205d9abfcfb363fe1ce8d5d2056abeb3f2e8691fbd761db"
+I1124 18:34:42.770709   13418 cri.go:94] found id: "8adf113858ff5379615cf4c969ad6e22438e77f396f134e5a0c9b2df590e3536"
+I1124 18:34:42.770711   13418 cri.go:94] found id: "13848cb0cdc59789f6cdfb356f53d71544886ed3f3501045f76250b1c0d0ed61"
+I1124 18:34:42.770712   13418 cri.go:94] found id: "1520d60ea27465652a8ce24130555b700aa86ac3891bdda0c8d50d66c93a252e"
+I1124 18:34:42.770716   13418 cri.go:94] found id: "50dac8b5027831ec0a4b1de732bb1d973597382cd004267ecb7b25a4462ffbbc"
+I1124 18:34:42.770720   13418 cri.go:94] found id: ""
+I1124 18:34:42.770764   13418 ssh_runner.go:191] Run: sudo runc --root /run/containerd/runc/k8s.io list -f json
+I1124 18:34:42.812680   13418 cri.go:121] JSON = [{"ociVersion":"1.3.0","id":"217ee47800d88b3c6cacfbddbcf44dca98c1479dbd69046819606a26b9843e2b","pid":1779,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/217ee47800d88b3c6cacfbddbcf44dca98c1479dbd69046819606a26b9843e2b","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/217ee47800d88b3c6cacfbddbcf44dca98c1479dbd69046819606a26b9843e2b/rootfs","created":"2026-11-24T09:28:09.388789147Z","annotations":{"io.kubernetes.cri.container-name":"web","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"ghcr.io/digitalife666/guestbook:v1","io.kubernetes.cri.sandbox-id":"cd2ceaae7b5b9b059c1321ce60c2694203d347aa75d6b9f3a086d7275f298087","io.kubernetes.cri.sandbox-name":"guestbook-7f9cd454c7-j8gmc","io.kubernetes.cri.sandbox-namespace":"default","io.kubernetes.cri.sandbox-uid":"fa3b00c7-6242-4bab-a0b6-daf9206bf2f5"},"owner":"root"},{"ociVersion":"1.3.0","id":"293c47f7ac4f6ffbb53d94856f2ef398686ab2f8d9b257196252b9d34d1f216e","pid":867,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/293c47f7ac4f6ffbb53d94856f2ef398686ab2f8d9b257196252b9d34d1f216e","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/293c47f7ac4f6ffbb53d94856f2ef398686ab2f8d9b257196252b9d34d1f216e/rootfs","created":"2026-11-24T09:28:03.83766783Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"102","io.kubernetes.cri.sandbox-id":"293c47f7ac4f6ffbb53d94856f2ef398686ab2f8d9b257196252b9d34d1f216e","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_kube-scheduler-minikube_92ab079de6ea387d99e64d9d353fc032","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"kube-scheduler-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"92ab079de6ea387d99e64d9d353fc032"},"owner":"root"},{"ociVersion":"1.3.0","id":"2edbcc1f60188c0dd98ce08d7fe06c10fd604b4b13452b1e466e5f2ed47341e2","pid":1431,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/2edbcc1f60188c0dd98ce08d7fe06c10fd604b4b13452b1e466e5f2ed47341e2","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/2edbcc1f60188c0dd98ce08d7fe06c10fd604b4b13452b1e466e5f2ed47341e2/rootfs","created":"2026-11-24T09:28:08.895215856Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"10000","io.kubernetes.cri.sandbox-cpu-shares":"102","io.kubernetes.cri.sandbox-id":"2edbcc1f60188c0dd98ce08d7fe06c10fd604b4b13452b1e466e5f2ed47341e2","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_kindnet-ktcgr_6fcb4b6b-e9f0-4004-a485-0c5a33d62793","io.kubernetes.cri.sandbox-memory":"52428800","io.kubernetes.cri.sandbox-name":"kindnet-ktcgr","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"6fcb4b6b-e9f0-4004-a485-0c5a33d62793"},"owner":"root"},{"ociVersion":"1.3.0","id":"386256ef37aea516bce7b405544448f32bfb0399bde9de8e4171811fb4055537","pid":1003,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/386256ef37aea516bce7b405544448f32bfb0399bde9de8e4171811fb4055537","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/386256ef37aea516bce7b405544448f32bfb0399bde9de8e4171811fb4055537/rootfs","created":"2026-11-24T09:28:04.235709711Z","annotations":{"io.kubernetes.cri.container-name":"kube-scheduler","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"registry.k8s.io/kube-scheduler:v1.37.0","io.kubernetes.cri.sandbox-id":"293c47f7ac4f6ffbb53d94856f2ef398686ab2f8d9b257196252b9d34d1f216e","io.kubernetes.cri.sandbox-name":"kube-scheduler-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"92ab079de6ea387d99e64d9d353fc032"},"owner":"root"},{"ociVersion":"1.3.0","id":"4a2354d6da2985d9ab4e005641b8a04803d84130c0e3620fae7e084a36b81792","pid":1017,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/4a2354d6da2985d9ab4e005641b8a04803d84130c0e3620fae7e084a36b81792","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/4a2354d6da2985d9ab4e005641b8a04803d84130c0e3620fae7e084a36b81792/rootfs","created":"2026-11-24T09:28:04.248931538Z","annotations":{"io.kubernetes.cri.container-name":"kube-apiserver","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"registry.k8s.io/kube-apiserver:v1.37.0","io.kubernetes.cri.sandbox-id":"c28917eab07fb21b3f9f474d5ab104566b325ff24a75bb516fc16a38696e560d","io.kubernetes.cri.sandbox-name":"kube-apiserver-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"f029d000c220d1bf9553ea5af5038d7f"},"owner":"root"},{"ociVersion":"1.3.0","id":"74f441ffe19086d6f8142a88c8addac36972fc2484c8992d53bcd6d8b77f1ebe","pid":1749,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/74f441ffe19086d6f8142a88c8addac36972fc2484c8992d53bcd6d8b77f1ebe","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/74f441ffe19086d6f8142a88c8addac36972fc2484c8992d53bcd6d8b77f1ebe/rootfs","created":"2026-11-24T09:28:09.337664264Z","annotations":{"io.kubernetes.cri.container-name":"web","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"ghcr.io/digitalife666/guestbook:v1","io.kubernetes.cri.sandbox-id":"fc37552229303e73bb69dc04f77074fce6b7bdd532540737f4ea9181d96dfe8e","io.kubernetes.cri.sandbox-name":"guestbook-7f9cd454c7-5vr7c","io.kubernetes.cri.sandbox-namespace":"default","io.kubernetes.cri.sandbox-uid":"7077f197-f104-4444-8a3f-7d0d6c69a6b8"},"owner":"root"},{"ociVersion":"1.3.0","id":"80fc471495782081ba38e20c3fdfd8eedbc828cb0cb8dad37314f2b5ff5405b0","pid":1005,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/80fc471495782081ba38e20c3fdfd8eedbc828cb0cb8dad37314f2b5ff5405b0","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/80fc471495782081ba38e20c3fdfd8eedbc828cb0cb8dad37314f2b5ff5405b0/rootfs","created":"2026-11-24T09:28:04.240133021Z","annotations":{"io.kubernetes.cri.container-name":"etcd","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"registry.k8s.io/etcd:3.7.0-0","io.kubernetes.cri.sandbox-id":"df3cbbc68d8ab5e2a5791ffee29072afd67de2aa73e9448c87b5c8a656ae73ca","io.kubernetes.cri.sandbox-name":"etcd-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"43363425e628a40eeb3afa755b92fbe2"},"owner":"root"},{"ociVersion":"1.3.0","id":"8d7d8ad73eb359c5450e2b8b1de837127b5443626500d6ce26725d44ec3b2ea7","pid":1719,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/8d7d8ad73eb359c5450e2b8b1de837127b5443626500d6ce26725d44ec3b2ea7","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/8d7d8ad73eb359c5450e2b8b1de837127b5443626500d6ce26725d44ec3b2ea7/rootfs","created":"2026-11-24T09:28:09.234117307Z","annotations":{"io.kubernetes.cri.container-name":"coredns","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"registry.k8s.io/coredns/coredns:v1.14.6","io.kubernetes.cri.sandbox-id":"f7f91d2451b4f4171fd831bb9456490e4402885ca8726aa83f6a26b6607bb3c1","io.kubernetes.cri.sandbox-name":"coredns-559f6c778d-5j2c2","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"8b767b42-9828-4614-a4fd-91141032ef6c"},"owner":"root"},{"ociVersion":"1.3.0","id":"94c3baa1c5dd1649ad04543c743a8957d516b47c1969d19e543906762bc5b68c","pid":1668,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/94c3baa1c5dd1649ad04543c743a8957d516b47c1969d19e543906762bc5b68c","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/94c3baa1c5dd1649ad04543c743a8957d516b47c1969d19e543906762bc5b68c/rootfs","created":"2026-11-24T09:28:08.963933772Z","annotations":{"io.kubernetes.cri.container-name":"kube-proxy","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"registry.k8s.io/kube-proxy:v1.37.0","io.kubernetes.cri.sandbox-id":"fe68ab34c2f9d6944e5427de13be1b5ca64c049e64749c52d635cc9f578030a8","io.kubernetes.cri.sandbox-name":"kube-proxy-fbp5d","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"af740267-9263-4770-a18c-7bc3c15da8dc"},"owner":"root"},{"ociVersion":"1.3.0","id":"ab18cb0979b19aca2ce2838d0dda2430b509d855bd0fdb971115c92a08c48201","pid":1357,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/ab18cb0979b19aca2ce2838d0dda2430b509d855bd0fdb971115c92a08c48201","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/ab18cb0979b19aca2ce2838d0dda2430b509d855bd0fdb971115c92a08c48201/rootfs","created":"2026-11-24T09:28:08.567477088Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"2","io.kubernetes.cri.sandbox-id":"ab18cb0979b19aca2ce2838d0dda2430b509d855bd0fdb971115c92a08c48201","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_storage-provisioner_f0bfece1-59b0-4572-962f-19da30412a5c","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"storage-provisioner","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"f0bfece1-59b0-4572-962f-19da30412a5c"},"owner":"root"},{"ociVersion":"1.3.0","id":"be15e65c9deb74b3b9159b873dbe48efedd2c328a4e55c0d13fbeed3d1bdae5a","pid":869,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/be15e65c9deb74b3b9159b873dbe48efedd2c328a4e55c0d13fbeed3d1bdae5a","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/be15e65c9deb74b3b9159b873dbe48efedd2c328a4e55c0d13fbeed3d1bdae5a/rootfs","created":"2026-11-24T09:28:03.834739337Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"204","io.kubernetes.cri.sandbox-id":"be15e65c9deb74b3b9159b873dbe48efedd2c328a4e55c0d13fbeed3d1bdae5a","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_kube-controller-manager-minikube_a551be458a0d45c3ba638929e5c6eb5e","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"kube-controller-manager-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"a551be458a0d45c3ba638929e5c6eb5e"},"owner":"root"},{"ociVersion":"1.3.0","id":"c28917eab07fb21b3f9f474d5ab104566b325ff24a75bb516fc16a38696e560d","pid":875,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/c28917eab07fb21b3f9f474d5ab104566b325ff24a75bb516fc16a38696e560d","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/c28917eab07fb21b3f9f474d5ab104566b325ff24a75bb516fc16a38696e560d/rootfs","created":"2026-11-24T09:28:03.838460482Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"256","io.kubernetes.cri.sandbox-id":"c28917eab07fb21b3f9f474d5ab104566b325ff24a75bb516fc16a38696e560d","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_kube-apiserver-minikube_f029d000c220d1bf9553ea5af5038d7f","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"kube-apiserver-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"f029d000c220d1bf9553ea5af5038d7f"},"owner":"root"},{"ociVersion":"1.3.0","id":"c85035d65e38fe45037a6234f4b99100d0d0dcce583909a83f17bbbe60b5e90f","pid":1012,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/c85035d65e38fe45037a6234f4b99100d0d0dcce583909a83f17bbbe60b5e90f","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/c85035d65e38fe45037a6234f4b99100d0d0dcce583909a83f17bbbe60b5e90f/rootfs","created":"2026-11-24T09:28:04.256733784Z","annotations":{"io.kubernetes.cri.container-name":"kube-controller-manager","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"registry.k8s.io/kube-controller-manager:v1.37.0","io.kubernetes.cri.sandbox-id":"be15e65c9deb74b3b9159b873dbe48efedd2c328a4e55c0d13fbeed3d1bdae5a","io.kubernetes.cri.sandbox-name":"kube-controller-manager-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"a551be458a0d45c3ba638929e5c6eb5e"},"owner":"root"},{"ociVersion":"1.3.0","id":"cd2ceaae7b5b9b059c1321ce60c2694203d347aa75d6b9f3a086d7275f298087","pid":1646,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/cd2ceaae7b5b9b059c1321ce60c2694203d347aa75d6b9f3a086d7275f298087","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/cd2ceaae7b5b9b059c1321ce60c2694203d347aa75d6b9f3a086d7275f298087/rootfs","created":"2026-11-24T09:28:08.873651345Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"2","io.kubernetes.cri.sandbox-id":"cd2ceaae7b5b9b059c1321ce60c2694203d347aa75d6b9f3a086d7275f298087","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/default_guestbook-7f9cd454c7-j8gmc_fa3b00c7-6242-4bab-a0b6-daf9206bf2f5","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"guestbook-7f9cd454c7-j8gmc","io.kubernetes.cri.sandbox-namespace":"default","io.kubernetes.cri.sandbox-uid":"fa3b00c7-6242-4bab-a0b6-daf9206bf2f5"},"owner":"root"},{"ociVersion":"1.3.0","id":"df3cbbc68d8ab5e2a5791ffee29072afd67de2aa73e9448c87b5c8a656ae73ca","pid":890,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/df3cbbc68d8ab5e2a5791ffee29072afd67de2aa73e9448c87b5c8a656ae73ca","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/df3cbbc68d8ab5e2a5791ffee29072afd67de2aa73e9448c87b5c8a656ae73ca/rootfs","created":"2026-11-24T09:28:03.848372635Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"102","io.kubernetes.cri.sandbox-id":"df3cbbc68d8ab5e2a5791ffee29072afd67de2aa73e9448c87b5c8a656ae73ca","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_etcd-minikube_43363425e628a40eeb3afa755b92fbe2","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"etcd-minikube","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"43363425e628a40eeb3afa755b92fbe2"},"owner":"root"},{"ociVersion":"1.3.0","id":"e4a1bec31d4b5e257fb10cccb9416bd0a024a46474d3851c8ce49eb310f5781b","pid":2031,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/e4a1bec31d4b5e257fb10cccb9416bd0a024a46474d3851c8ce49eb310f5781b","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/e4a1bec31d4b5e257fb10cccb9416bd0a024a46474d3851c8ce49eb310f5781b/rootfs","created":"2026-11-24T09:28:45.134202679Z","annotations":{"io.kubernetes.cri.container-name":"storage-provisioner","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"gcr.io/k8s-minikube/storage-provisioner:v5","io.kubernetes.cri.sandbox-id":"ab18cb0979b19aca2ce2838d0dda2430b509d855bd0fdb971115c92a08c48201","io.kubernetes.cri.sandbox-name":"storage-provisioner","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"f0bfece1-59b0-4572-962f-19da30412a5c"},"owner":"root"},{"ociVersion":"1.3.0","id":"ecb63a960d380242c974a93f614bf422fb7f06e84509bf1d829a2ba918ca4044","pid":1827,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/ecb63a960d380242c974a93f614bf422fb7f06e84509bf1d829a2ba918ca4044","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/ecb63a960d380242c974a93f614bf422fb7f06e84509bf1d829a2ba918ca4044/rootfs","created":"2026-11-24T09:28:10.297494131Z","annotations":{"io.kubernetes.cri.container-name":"kindnet-cni","io.kubernetes.cri.container-type":"container","io.kubernetes.cri.image-name":"docker.io/kindest/kindnetd:v20260820-69b56db7","io.kubernetes.cri.sandbox-id":"2edbcc1f60188c0dd98ce08d7fe06c10fd604b4b13452b1e466e5f2ed47341e2","io.kubernetes.cri.sandbox-name":"kindnet-ktcgr","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"6fcb4b6b-e9f0-4004-a485-0c5a33d62793"},"owner":"root"},{"ociVersion":"1.3.0","id":"f7f91d2451b4f4171fd831bb9456490e4402885ca8726aa83f6a26b6607bb3c1","pid":1579,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/f7f91d2451b4f4171fd831bb9456490e4402885ca8726aa83f6a26b6607bb3c1","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/f7f91d2451b4f4171fd831bb9456490e4402885ca8726aa83f6a26b6607bb3c1/rootfs","created":"2026-11-24T09:28:08.772474154Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"102","io.kubernetes.cri.sandbox-id":"f7f91d2451b4f4171fd831bb9456490e4402885ca8726aa83f6a26b6607bb3c1","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_coredns-559f6c778d-5j2c2_8b767b42-9828-4614-a4fd-91141032ef6c","io.kubernetes.cri.sandbox-memory":"178257920","io.kubernetes.cri.sandbox-name":"coredns-559f6c778d-5j2c2","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"8b767b42-9828-4614-a4fd-91141032ef6c"},"owner":"root"},{"ociVersion":"1.3.0","id":"fc37552229303e73bb69dc04f77074fce6b7bdd532540737f4ea9181d96dfe8e","pid":1612,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/fc37552229303e73bb69dc04f77074fce6b7bdd532540737f4ea9181d96dfe8e","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/fc37552229303e73bb69dc04f77074fce6b7bdd532540737f4ea9181d96dfe8e/rootfs","created":"2026-11-24T09:28:08.837467409Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"2","io.kubernetes.cri.sandbox-id":"fc37552229303e73bb69dc04f77074fce6b7bdd532540737f4ea9181d96dfe8e","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/default_guestbook-7f9cd454c7-5vr7c_7077f197-f104-4444-8a3f-7d0d6c69a6b8","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"guestbook-7f9cd454c7-5vr7c","io.kubernetes.cri.sandbox-namespace":"default","io.kubernetes.cri.sandbox-uid":"7077f197-f104-4444-8a3f-7d0d6c69a6b8"},"owner":"root"},{"ociVersion":"1.3.0","id":"fe68ab34c2f9d6944e5427de13be1b5ca64c049e64749c52d635cc9f578030a8","pid":1499,"status":"running","bundle":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/fe68ab34c2f9d6944e5427de13be1b5ca64c049e64749c52d635cc9f578030a8","rootfs":"/run/containerd/io.containerd.runtime.v2.task/k8s.io/fe68ab34c2f9d6944e5427de13be1b5ca64c049e64749c52d635cc9f578030a8/rootfs","created":"2026-11-24T09:28:08.657055966Z","annotations":{"io.kubernetes.cri.container-type":"sandbox","io.kubernetes.cri.podsandbox.image-name":"registry.k8s.io/pause:3.10.2","io.kubernetes.cri.sandbox-cpu-period":"100000","io.kubernetes.cri.sandbox-cpu-quota":"0","io.kubernetes.cri.sandbox-cpu-shares":"2","io.kubernetes.cri.sandbox-id":"fe68ab34c2f9d6944e5427de13be1b5ca64c049e64749c52d635cc9f578030a8","io.kubernetes.cri.sandbox-log-directory":"/var/log/pods/kube-system_kube-proxy-fbp5d_af740267-9263-4770-a18c-7bc3c15da8dc","io.kubernetes.cri.sandbox-memory":"0","io.kubernetes.cri.sandbox-name":"kube-proxy-fbp5d","io.kubernetes.cri.sandbox-namespace":"kube-system","io.kubernetes.cri.sandbox-uid":"af740267-9263-4770-a18c-7bc3c15da8dc"},"owner":"root"}]
+I1124 18:34:42.813176   13418 cri.go:131] list returned 20 containers
+I1124 18:34:42.813198   13418 cri.go:134] container: {ID:217ee47800d88b3c6cacfbddbcf44dca98c1479dbd69046819606a26b9843e2b Status:running}
+I1124 18:34:42.813211   13418 cri.go:136] skipping 217ee47800d88b3c6cacfbddbcf44dca98c1479dbd69046819606a26b9843e2b - not in ps
+I1124 18:34:42.813215   13418 cri.go:134] container: {ID:293c47f7ac4f6ffbb53d94856f2ef398686ab2f8d9b257196252b9d34d1f216e Status:running}
+I1124 18:34:42.813234   13418 cri.go:136] skipping 293c47f7ac4f6ffbb53d94856f2ef398686ab2f8d9b257196252b9d34d1f216e - not in ps
+I1124 18:34:42.813238   13418 cri.go:134] container: {ID:2edbcc1f60188c0dd98ce08d7fe06c10fd604b4b13452b1e466e5f2ed47341e2 Status:running}
+I1124 18:34:42.813242   13418 cri.go:136] skipping 2edbcc1f60188c0dd98ce08d7fe06c10fd604b4b13452b1e466e5f2ed47341e2 - not in ps
+I1124 18:34:42.813258   13418 cri.go:134] container: {ID:386256ef37aea516bce7b405544448f32bfb0399bde9de8e4171811fb4055537 Status:running}
+I1124 18:34:42.813263   13418 cri.go:140] skipping {386256ef37aea516bce7b405544448f32bfb0399bde9de8e4171811fb4055537 running}: state = "running", want "paused"
+I1124 18:34:42.813269   13418 cri.go:134] container: {ID:4a2354d6da2985d9ab4e005641b8a04803d84130c0e3620fae7e084a36b81792 Status:running}
+I1124 18:34:42.813274   13418 cri.go:140] skipping {4a2354d6da2985d9ab4e005641b8a04803d84130c0e3620fae7e084a36b81792 running}: state = "running", want "paused"
+I1124 18:34:42.813277   13418 cri.go:134] container: {ID:74f441ffe19086d6f8142a88c8addac36972fc2484c8992d53bcd6d8b77f1ebe Status:running}
+I1124 18:34:42.813280   13418 cri.go:136] skipping 74f441ffe19086d6f8142a88c8addac36972fc2484c8992d53bcd6d8b77f1ebe - not in ps
+I1124 18:34:42.813282   13418 cri.go:134] container: {ID:80fc471495782081ba38e20c3fdfd8eedbc828cb0cb8dad37314f2b5ff5405b0 Status:running}
+I1124 18:34:42.813306   13418 cri.go:140] skipping {80fc471495782081ba38e20c3fdfd8eedbc828cb0cb8dad37314f2b5ff5405b0 running}: state = "running", want "paused"
+I1124 18:34:42.813309   13418 cri.go:134] container: {ID:8d7d8ad73eb359c5450e2b8b1de837127b5443626500d6ce26725d44ec3b2ea7 Status:running}
+I1124 18:34:42.813312   13418 cri.go:140] skipping {8d7d8ad73eb359c5450e2b8b1de837127b5443626500d6ce26725d44ec3b2ea7 running}: state = "running", want "paused"
+I1124 18:34:42.813315   13418 cri.go:134] container: {ID:94c3baa1c5dd1649ad04543c743a8957d516b47c1969d19e543906762bc5b68c Status:running}
+I1124 18:34:42.813317   13418 cri.go:140] skipping {94c3baa1c5dd1649ad04543c743a8957d516b47c1969d19e543906762bc5b68c running}: state = "running", want "paused"
+I1124 18:34:42.813319   13418 cri.go:134] container: {ID:ab18cb0979b19aca2ce2838d0dda2430b509d855bd0fdb971115c92a08c48201 Status:running}
+I1124 18:34:42.813324   13418 cri.go:136] skipping ab18cb0979b19aca2ce2838d0dda2430b509d855bd0fdb971115c92a08c48201 - not in ps
+I1124 18:34:42.813326   13418 cri.go:134] container: {ID:be15e65c9deb74b3b9159b873dbe48efedd2c328a4e55c0d13fbeed3d1bdae5a Status:running}
+I1124 18:34:42.813329   13418 cri.go:136] skipping be15e65c9deb74b3b9159b873dbe48efedd2c328a4e55c0d13fbeed3d1bdae5a - not in ps
+I1124 18:34:42.813332   13418 cri.go:134] container: {ID:c28917eab07fb21b3f9f474d5ab104566b325ff24a75bb516fc16a38696e560d Status:running}
+I1124 18:34:42.813334   13418 cri.go:136] skipping c28917eab07fb21b3f9f474d5ab104566b325ff24a75bb516fc16a38696e560d - not in ps
+I1124 18:34:42.813336   13418 cri.go:134] container: {ID:c85035d65e38fe45037a6234f4b99100d0d0dcce583909a83f17bbbe60b5e90f Status:running}
+I1124 18:34:42.813340   13418 cri.go:140] skipping {c85035d65e38fe45037a6234f4b99100d0d0dcce583909a83f17bbbe60b5e90f running}: state = "running", want "paused"
+I1124 18:34:42.813343   13418 cri.go:134] container: {ID:cd2ceaae7b5b9b059c1321ce60c2694203d347aa75d6b9f3a086d7275f298087 Status:running}
+I1124 18:34:42.813347   13418 cri.go:136] skipping cd2ceaae7b5b9b059c1321ce60c2694203d347aa75d6b9f3a086d7275f298087 - not in ps
+I1124 18:34:42.813349   13418 cri.go:134] container: {ID:df3cbbc68d8ab5e2a5791ffee29072afd67de2aa73e9448c87b5c8a656ae73ca Status:running}
+I1124 18:34:42.813352   13418 cri.go:136] skipping df3cbbc68d8ab5e2a5791ffee29072afd67de2aa73e9448c87b5c8a656ae73ca - not in ps
+I1124 18:34:42.813356   13418 cri.go:134] container: {ID:e4a1bec31d4b5e257fb10cccb9416bd0a024a46474d3851c8ce49eb310f5781b Status:running}
+I1124 18:34:42.813359   13418 cri.go:140] skipping {e4a1bec31d4b5e257fb10cccb9416bd0a024a46474d3851c8ce49eb310f5781b running}: state = "running", want "paused"
+I1124 18:34:42.813366   13418 cri.go:134] container: {ID:ecb63a960d380242c974a93f614bf422fb7f06e84509bf1d829a2ba918ca4044 Status:running}
+I1124 18:34:42.813385   13418 cri.go:140] skipping {ecb63a960d380242c974a93f614bf422fb7f06e84509bf1d829a2ba918ca4044 running}: state = "running", want "paused"
+I1124 18:34:42.813388   13418 cri.go:134] container: {ID:f7f91d2451b4f4171fd831bb9456490e4402885ca8726aa83f6a26b6607bb3c1 Status:running}
+I1124 18:34:42.813406   13418 cri.go:136] skipping f7f91d2451b4f4171fd831bb9456490e4402885ca8726aa83f6a26b6607bb3c1 - not in ps
+I1124 18:34:42.813409   13418 cri.go:134] container: {ID:fc37552229303e73bb69dc04f77074fce6b7bdd532540737f4ea9181d96dfe8e Status:running}
+I1124 18:34:42.813413   13418 cri.go:136] skipping fc37552229303e73bb69dc04f77074fce6b7bdd532540737f4ea9181d96dfe8e - not in ps
+I1124 18:34:42.813416   13418 cri.go:134] container: {ID:fe68ab34c2f9d6944e5427de13be1b5ca64c049e64749c52d635cc9f578030a8 Status:running}
+I1124 18:34:42.813419   13418 cri.go:136] skipping fe68ab34c2f9d6944e5427de13be1b5ca64c049e64749c52d635cc9f578030a8 - not in ps
+I1124 18:34:42.813512   13418 ssh_runner.go:191] Run: sudo ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+I1124 18:34:42.828635   13418 kubeadm.go:412] found existing configuration files, will attempt cluster restart
+I1124 18:34:42.828650   13418 kubeadm.go:593] restartPrimaryControlPlane start ...
+I1124 18:34:42.828707   13418 ssh_runner.go:191] Run: sudo test -d /data/minikube
+I1124 18:34:42.840594   13418 kubeadm.go:131] /data/minikube skipping compat symlinks: sudo test -d /data/minikube: Process exited with status 1
+stdout:
+
+stderr:
+I1124 18:34:42.841432   13418 kubeconfig.go:125] found "minikube" server: "https://192.168.49.2:8443"
+I1124 18:34:42.843692   13418 ssh_runner.go:191] Run: sudo diff -u /var/tmp/minikube/kubeadm.yaml /var/tmp/minikube/kubeadm.yaml.new
+I1124 18:34:42.858949   13418 kubeadm.go:630] The running cluster does not require reconfiguration: 192.168.49.2
+I1124 18:34:42.858980   13418 kubeadm.go:597] duration metric: took 30.327693ms to restartPrimaryControlPlane
+I1124 18:34:42.858987   13418 kubeadm.go:398] duration metric: took 131.594782ms to StartCluster
+I1124 18:34:42.859011   13418 settings.go:145] acquiring lock: {Name:mk726f89ab62852ee04be95688e68940ca85aeed Timeout:1m0s Delay:500ms}
+I1124 18:34:42.859073   13418 settings.go:153] Updating kubeconfig:  /home/prime/.kube/config
+I1124 18:34:42.859974   13418 lock.go:61] WriteFile acquiring /home/prime/.kube/config: {Name:mk7974011ac0abc1d7012c3fb48f1b19bdf3c33b Timeout:1m0s Delay:500ms}
+I1124 18:34:42.860202   13418 start.go:226] Will wait 6m0s for node &{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.37.0 ContainerRuntime:containerd ControlPlane:true Worker:true}
+I1124 18:34:42.860418   13418 addons.go:541] enable addons start: toEnable=map[ambassador:false amd-gpu-device-plugin:false auto-pause:false cloud-spanner:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false headlamp:false inaccel:false ingress:false ingress-dns:false inspektor-gadget:false istio:false istio-provisioner:false kong:false kubeflow:false kubetail:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-device-plugin:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-rancher:false traefik:false volcano:false volumesnapshots:false yakd:false]
+I1124 18:34:42.860471   13418 addons.go:71] Setting storage-provisioner=true in profile "minikube"
+I1124 18:34:42.860484   13418 addons.go:247] Setting addon storage-provisioner=true in "minikube"
+W1124 18:34:42.860490   13418 addons.go:256] addon storage-provisioner should already be in state true
+I1124 18:34:42.860528   13418 host.go:67] Checking if "minikube" exists ...
+I1124 18:34:42.860538   13418 addons.go:71] Setting default-storageclass=true in profile "minikube"
+I1124 18:34:42.860565   13418 addons_storage_classes.go:34] enableOrDisableStorageClasses default-storageclass=true on "minikube"
+I1124 18:34:42.860604   13418 config.go:187] Loaded profile config "minikube": Driver=docker, ContainerRuntime=containerd, KubernetesVersion=v1.37.0
+I1124 18:34:42.860995   13418 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1124 18:34:42.861017   13418 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1124 18:34:42.867094   13418 out.go:180] 🔎  Verifying Kubernetes components...
+I1124 18:34:42.870161   13418 ssh_runner.go:191] Run: sudo systemctl daemon-reload
+I1124 18:34:42.935380   13418 out.go:180]     ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+I1124 18:34:42.938919   13418 addons.go:247] Setting addon default-storageclass=true in "minikube"
+W1124 18:34:42.938929   13418 addons.go:256] addon default-storageclass should already be in state true
+I1124 18:34:42.938960   13418 host.go:67] Checking if "minikube" exists ...
+I1124 18:34:42.938985   13418 addons.go:444] installing /etc/kubernetes/addons/storage-provisioner.yaml
+I1124 18:34:42.939008   13418 ssh_runner.go:352] scp memory --> /etc/kubernetes/addons/storage-provisioner.yaml (2676 bytes)
+I1124 18:34:42.939116   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:42.939492   13418 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1124 18:34:43.033542   13418 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51635 SSHKeyPath:/home/prime/.minikube/machines/minikube/id_rsa Username:docker}
+I1124 18:34:43.034715   13418 addons.go:444] installing /etc/kubernetes/addons/storageclass.yaml
+I1124 18:34:43.034730   13418 ssh_runner.go:352] scp storageclass/storageclass.yaml --> /etc/kubernetes/addons/storageclass.yaml (271 bytes)
+I1124 18:34:43.034835   13418 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1124 18:34:43.096054   13418 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:51635 SSHKeyPath:/home/prime/.minikube/machines/minikube/id_rsa Username:docker}
+I1124 18:34:43.175064   13418 ssh_runner.go:191] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.37.0/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml
+I1124 18:34:43.229840   13418 ssh_runner.go:191] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.37.0/kubectl apply -f /etc/kubernetes/addons/storageclass.yaml
+I1124 18:34:43.261501   13418 ssh_runner.go:191] Run: sudo systemctl start kubelet
+I1124 18:34:43.820137   13418 api_server.go:52] waiting for apiserver process to appear ...
+I1124 18:34:43.820244   13418 ssh_runner.go:191] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I1124 18:34:43.839147   13418 api_server.go:72] duration metric: took 978.914558ms to wait for apiserver process to appear ...
+I1124 18:34:43.839173   13418 api_server.go:88] waiting for apiserver healthz status ...
+I1124 18:34:43.839185   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I1124 18:34:48.842413   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:34:48.842448   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I1124 18:34:53.843534   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:34:53.843565   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I1124 18:34:58.842255   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:34:58.842465   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I1124 18:35:03.843448   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:35:03.843473   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I1124 18:35:08.846832   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:35:08.846865   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+W1124 18:35:13.818493   13418 out.go:286] ❗  Enabling 'default-storageclass' returned an error: running callbacks: [Error making standard the default storage class: Error listing StorageClasses: Get "https://192.168.49.2:8443/apis/storage.k8s.io/v1/storageclasses": dial tcp 192.168.49.2:8443: i/o timeout]
+I1124 18:35:13.826051   13418 out.go:180] 🌟  Enabled addons: storage-provisioner
+I1124 18:35:13.829378   13418 addons.go:544] duration metric: took 30.971234029s for enable addons: enabled=[storage-provisioner]
+I1124 18:35:13.847708   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:35:13.847736   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I1124 18:35:18.850344   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:35:18.850364   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+I1124 18:35:23.851589   13418 api_server.go:315] stopped: https://192.168.49.2:8443/healthz: Get "https://192.168.49.2:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I1124 18:35:23.851622   13418 api_server.go:299] Checking apiserver healthz at https://192.168.49.2:8443/healthz ...
+
+
